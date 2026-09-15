@@ -139,6 +139,49 @@
       text-transform: uppercase; font-weight: 700;
     }
 
+
+    .pipeline-canvas {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      padding: 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.04);
+    }
+    .pipeline-card {
+      margin: 0;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .pipeline-card:hover {
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+      transform: translateY(-1px);
+    }
+    .pipeline-card a { display: block; border-bottom: none !important; }
+    .pipeline-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: #f5f4ef;
+    }
+    .pipeline-card figcaption {
+      padding: 8px 12px;
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--ink-soft);
+      text-align: center;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      background: #faf9f4;
+      border-top: 1px solid var(--line);
+    }
+
     pre.bibtex {
       background: #14171c; color: #e6e6e6; border-radius: 10px;
       padding: 20px 22px; overflow-x: auto;
@@ -229,7 +272,26 @@
             <li><strong>Text-to-B-Rep</strong> outputs that remain editable in standard CAD tools.</li>
           </ul>
         </div>
-        <div class="placeholder">Pipeline Diagram · Coming Soon</div>
+        <div class="pipeline-canvas">
+        <figure class="pipeline-card">
+          <a href="asset/pipline1.jpg" target="_blank" rel="noopener">
+            <img src="asset/pipline1.jpg" alt="ToolCAD pipeline diagram, stage 1" loading="lazy" />
+          </a>
+          <figcaption>Pipeline &middot; Stage 1</figcaption>
+        </figure>
+        <figure class="pipeline-card">
+          <a href="asset/pipline2.jpg" target="_blank" rel="noopener">
+            <img src="asset/pipline2.jpg" alt="ToolCAD pipeline diagram, stage 2" loading="lazy" />
+          </a>
+          <figcaption>Pipeline &middot; Stage 2</figcaption>
+        </figure>
+        <figure class="pipeline-card">
+          <a href="asset/workflow.png" target="_blank" rel="noopener">
+            <img src="asset/workflow.png" alt="ToolCAD end-to-end workflow" loading="lazy" />
+          </a>
+          <figcaption>End-to-End Workflow</figcaption>
+        </figure>
+      </div>
       </div>
     </section>
 
